@@ -1,0 +1,209 @@
+<html>
+	<head>
+		<title>carpooling</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style type="text/css">
+			.body{
+				
+			}
+			
+			input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4c86af;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset] {
+    width: 100%;
+    background-color: #af7e4c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #264458;
+}
+
+input[type=reset]:hover {
+    background-color: #543e27;
+}
+
+.form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: black;
+    margin-left: 450px;
+    margin-right: 450px;
+    padding: 20px;
+}
+		</style>
+	<script type="text/javascript">
+	function func(){
+		var a=document.getElementById("fname").value;
+		var aa=a.length;
+		var b=document.getElementById("email").value;
+		var bb=b.length;
+		var d=document.getElementById("Passport No").value;
+		var e=d.length;
+		var repass=document.getElementById("repas").value;
+		
+		var str=b.search("@");
+		if(aa==0||bb==0||e==0)
+			window.alert("Enter Full Data");
+		else if(str==-1)
+			window.alert("Enter Valid Email Address");
+		else if(e<10)
+		{
+			window.alert("Password minimum of 10 char");
+		}
+		else if(document.getElementById("phone").value.length !=10)
+		{
+			
+			window.alert("Enter Correct Phone Number")
+		}
+		else if(d!=repass)
+		{
+			window.alert("Password Do Not Match")
+		}
+	}
+	</script>
+	</head>
+
+	<body>
+		<header>
+			<div id="main">			
+					<ul>
+						<a href="index1.html"><img src="images/adventure.png" alt="hd"></a>
+						<li><a href="contact.html"><b>Contact Us</b></a></li>
+						<li><a href="offer a ride.html"><b>Offer A Ride</b></a></li>
+						<li><a href="find a ride.html"><b>Find A Ride</b></a></li>	
+						<li><a href="index1.html"><b>Home</b></a></li>						
+					</ul>				   	
+			</div>
+		</header>
+		<div class="body" style="background-image: url(images/book.jpg);">
+		<h1 align="center">OFFER A RIDE</h1>
+			<div class="form">
+				<b>PICK UP AND DROP OFF POINT:-</b><br>
+
+</br>
+  <form action ="ride_info" method ="post" >
+  	
+
+    <label for="fname">Pick up point</label>
+    <input type="text" id="country" name="city1" required="country" placeholder="leaving point">
+
+    <label for="lname">Drop off ponit</label>
+    <input type="text" id="country" name="city2" required="country" placeholder="droping point">
+    <br>
+    <br>
+<input type="number" id="country" name="city3" required="country" placeholder="NO. of passenger">
+<br>
+ <b> DATE AND TIME:--</b><br>
+</br>
+  <br>
+
+  	  <label for="Passport No">Deprture date</label>
+    <input type="date" id="phone" name="date1" placeholder="phone no..">
+    <input type="time" id="phone" name="time" placeholder="phone no..">
+
+  
+    <input type="submit" value="submit" >
+   
+  </form>
+
+</div>
+/*
+<script type="text/javascript">
+	function Submit(){
+		alert("Your Details have been recieved.");
+	}
+</script>*/
+		</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+		
+		<footer>
+			    <div class="col-md-3">
+						<ul class="footer_box">
+							<h4>About</h4>
+							<li><a href="#">UDAY PRAKASH</a></li>
+							<li><a href="#">CHITKARA UNIVERSITY</a></li>
+							<li><a href="#">Atal siksha kunj, atal nagar barotiwala</a></li>
+							<li><a href="#">baddi himachal pradesh</a></li>
+						</ul>
+					</div>
+				<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Customer Support</h4>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#"></a></li>
+						
+						</ul>
+					</div>
+				<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Newsletter</h4>
+							<div class="footer_search">
+				    		   <form>
+				    			<input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+				    			<input type="submit" value="Go">
+				    		   </form>
+						</div>					   
+				</div><br><br><br><br><br><br><br><br>
+				<div class="footer_bottom">
+			           <p>� 2018 <b>CARPOOL WORLD</b></p>
+		            </div>
+		</footer>
+
+	</body>
+     
+</html>
